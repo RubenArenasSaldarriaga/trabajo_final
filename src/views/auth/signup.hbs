@@ -1,0 +1,45 @@
+<div class="container p-4">
+  <div class="row">
+    <div class="col-md-4 mx-auto">
+      <div class="card text-center">
+        <div class="card-header">
+          <h3>SignUp</h3>
+        </div>
+        <div class="card-body">
+          <form action="/signup" method="POST">
+            <div class="form-group">
+
+              <!--Admitiremos nombres de cualquier nacionalidad, 
+              incluyendo nombres compuestos y la mayoría de normas de acentuación. 
+              El número de caracteres será como mínimo 2 y como máximo 64            -->
+              <input type="text" name="fullname" placeholder="Full Name" class="form-control" 
+              pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}"
+              autofocus>
+            </div>
+            <div class="form-group">
+              
+              <!--Vamos a solicitar para el usuario de acceso al servicio una cadena de letras minúsculas, 
+              con un número opcionalmente de hasta dos dígitos al final. 
+              La cadena completa tendrá entre 5 y 12 caracteres.-->
+              <input type="text" name="username" placeholder="Username" class="form-control"
+              pattern="^([a-z]+[0-9]{0,2}){5,12}$" required/>
+            </div>
+            <div class="form-group">
+              
+              <!--podrá contener letras mayúsculas, minúsculas, números y los caracteres !?-.
+               Su tamaño: entre 6 y 12 caracteres.-->
+              <input type="password" name="password" placeholder="Password" class="form-control"
+              pattern="[A-Za-z0-9!?-]{6,12}" required/>
+
+            </div>
+            <div class="form-group">
+              <button class="btn btn-success btn-block">
+                SingIn
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
